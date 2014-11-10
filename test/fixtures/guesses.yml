@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  cast_member_status_id: 1
+  winner_guess: false
+
+two:
+  user_id: 1
+  cast_member_status_id: 1
+  winner_guess: false

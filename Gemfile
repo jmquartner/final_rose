@@ -38,3 +38,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'devise'
+gem 'pry-rails'
+gem 'rails-erd'
+gem 'simple_form', '~> 3.1.0rc1'
