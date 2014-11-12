@@ -39,6 +39,15 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise'
-gem 'pry-rails'
 gem 'rails-erd'
 gem 'simple_form', '~> 3.1.0rc1'
+
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+
+group :development do  
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end

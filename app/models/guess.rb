@@ -4,4 +4,6 @@ class Guess < ActiveRecord::Base
 
 	delegate :episode, to: :cast_member_status
 	delegate :cast_member, to: :cast_member_status
+
+  
 end

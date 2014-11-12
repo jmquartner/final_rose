@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+ActiveRecord::Base.transaction do 
 
 episode1 = Episode.create(air_date: DateTime.parse('20140519'), description: 'Andi, an assistant district attorney from Atlanta, meets the bachelors.')
 episode2 = Episode.create(air_date: DateTime.parse('20140526'), description: 'Fourteen of the men perform routines for a charity event at an exotic male revue.')
@@ -218,3 +219,6 @@ cast_member25 = CastMember.create(first_name: 'Steven',
   occupation: 'Snowboard Product Developer',
   date_of_birth: '',
   episodes: [])
+
+puts 'Successfully added seed data'
+end

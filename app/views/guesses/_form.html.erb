@@ -1,0 +1,6 @@
+<%= simple_form_for @guess do |f| %>
+
+  <%= f.association :episodes %>
+  <%= f.input :winner_guess, as: :radio_buttons%>
+  <%= f.button :submit %>
+<% end %>
