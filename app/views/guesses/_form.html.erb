@@ -1,6 +1,9 @@
-<%= simple_form_for @guess do |f| %>
+ <h1> Make your Guess for Episode <%= @episode.air_date.to_date %> </h1>
 
-  <%= f.association :episodes %>
-  <%= f.input :winner_guess, as: :radio_buttons%>
-  <%= f.button :submit %>
+<%= simple_form_for :guesses, url: episode_guesses_path(episode_id: params[:episode_id]), method: :post do |f| %>
+  <% @cast_member_statuses.each do |status| %>
+    <%= status.cast_member.full_name %><br>
+    <%= f.input status.cast_member.id, as: :radio_buttons, name: "#{status.cast_member.id}" %>
+  <% end %>
+  <%= f.submit %>
 <% end %>

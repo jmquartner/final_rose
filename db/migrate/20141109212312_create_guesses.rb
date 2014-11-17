@@ -5,6 +5,7 @@ class CreateGuesses < ActiveRecord::Migration
       t.integer :cast_member_status_id
       t.boolean :winner_guess
 
+
       t.timestamps
     end
   end

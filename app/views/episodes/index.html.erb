@@ -1,15 +1,19 @@
-<h2>Episodes</h2>
+<h2>Home</h2>
 <hr>
 <br>
+<% User.all.each do |user| %>
+  <p> User: <%= user.email %> </p>
+  <p> Total Points: <%= user.total_points %> </p>
+  <% end %>
+  <hr>
   <% @episodes.each do |episode| %>
       <h3><%='Episode' %></h3>
       <h4><%='Air Date'%></h4>
-      <p><%= episode.air_date %></p>
+      <p><%= episode.air_date.to_date %></p>
       <h4><%='Description'%></h4>
       <p><%= episode.description %></p>
-      <h4><%= 'Cast Members' %></h4>
-      <% episode.cast_members.each do |cast_member|%>
-        <p><%=cast_member.first_name%></p>
-      <% end %>
   <% end %>
+
+
+
 </div>

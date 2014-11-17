@@ -1,16 +1,12 @@
 <h2>Guesses</h2>
 <hr>
 <br>
-  <% @guess.each do |guess| %>
-     <h3><%='Episode' %></h3>
-      <h4><%='Air Date'%></h4>
-      <p><%= episode.air_date %></p>
-      <h4><%='Description'%></h4>
-      <p><%= episode.description %></p>
-      <h4><%= 'Cast Members' %></h4>
-      <% episode.cast_members.each do |cast_member|%>
-        <p><%=cast_member.first_name%></p>
-        <p><%=cast_member_status%></p>
-      <% end %>
+<h3> Total points: <%= current_user.total_points %> </h3>
+ <% @guesses.each do |guess| %>
+      <p><%= guess.episode.air_date.to_date %></p>
+      <p><%= guess.cast_member.full_name %></p>
+      <p><%= guess.winner_guess %></p>
+       <p>Points for guess: <%= guess.points %></p>
   <% end %>
+  
 </div>
