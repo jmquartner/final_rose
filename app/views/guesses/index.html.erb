@@ -3,10 +3,11 @@
 <br>
 <h3> Total points: <%= current_user.total_points %> </h3>
  <% @guesses.each do |guess| %>
-      <p><%= guess.episode.air_date.to_date %></p>
-      <p><%= guess.cast_member.full_name %></p>
-      <p><%= guess.winner_guess %></p>
+      <h5>Episode air date: <%= guess.episode.air_date.to_date %></h5>
+      <p>For: <%= guess.cast_member.full_name %></p>
+      <p>Your Guess: <%= guess.winner_guess %></p>
        <p>Points for guess: <%= guess.points %></p>
+       <br>
   <% end %>
   
 </div>

@@ -11,13 +11,17 @@
   <div class="navbar-text navbar-right">
           <% if user_signed_in? %>
             <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+            <br>
              <%if current_user.guesses.present? %>
               <%= link_to 'Your Guesses', episode_guesses_path(:episode_id => 1) %>
+              <br>
              <% else %> 
                <%= link_to 'Make Your Guesses', new_episode_guess_path(:episode_id => 1) %>
+               <br>
              <% end %>
           <% else %>
             <%= link_to 'Sign In', new_user_session_path %>
+            <br>
           <% end %>
 
           <%= link_to 'Home', root_path %> 
